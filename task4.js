@@ -4,7 +4,8 @@ exports.maximum = (arr) => {
     let resultProc = {};
     arr.forEach(value => resultProc[value] = resultProc[value] + 1 || 1);
     for (let i in resultProc) if (resultProc[i] > max) max = resultProc[i];
-    console.log(resultProc)
-    console.log("number",max);
+    return (max);
+
+
 
 };

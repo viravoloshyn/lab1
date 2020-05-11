@@ -1,9 +1,13 @@
-//const {combinations} = require('./anotherPart');
 const {string_separate} = require('./task1')
 const {combinations} = require('./task2')
 const {sFact}=require('./task3');
 const {maximum}=require('./task4');
 const {calendar}=require('./task5');
+
+const {Passenger}=require('./Passenger');
+const {Ticket}=require('./Ticket');
+const {Train}=require('./Train');
+
 
 
 //Task 1 Реалізувати розбиття стрічки на слова у масив. Допустим є написання функцій.
@@ -15,6 +19,7 @@ console.log(string_separate("На вулиці теплий вечір"))
 //Task 2 Написати функцію, яка поверне усі перестановки слова
 console.log('---------------Task 2---------------');
 console.log(combinations('абв'));
+console.log(combinations('abcde').length)
 
 //Task 3 Написати функцію, яка порахує факторіал натурального числа
 console.log('---------------Task 3---------------');
@@ -27,13 +32,14 @@ console.log('---------------Task 4---------------');
 
 let qwerty = [7, 3, 2, 7, 9, 1, 6, 4, 8, 2, 3, 5, 3, 4];
 
-maximum(qwerty);
+
+console.log(maximum(qwerty));
 
 //Task 5 Написати функцію, яка поверне кількість днів для заданого місяця та року.
 console.log('---------------Task 5---------------');
 
 
-calendar(4, 2010);
+console.log(calendar(4, 2010));
 
 //Task 6 Написати реалізацію швидкого сортування масиву
 console.log('---------------Task 6---------------');
@@ -56,46 +62,22 @@ console.log(QuickSort(mass));
 // a. Пасажир
 // b. Квиток
 // c. Потяг
-// d. Продані квитки
+
 
 console.log('---------------Task 7---------------');
 
-class Passenger {
-    constructor(name, ticket, document) {
-        this.name = name;
-        this.ticket = ticket;
-        this.document = document;
-    }
-}
 
-class Ticket {
-    constructor(train, number, date, sit) {
-        this.train = train;
-        this.number = number;
-        this.date = date;
-        this.sit = sit;
-    }
-}
-
-class Train {
-    constructor(number, wagons, way) {
-        this.number = number;
-        this.wagons = wagons;
-        this.way = way;
-    }
-}
-
-let Passengers = [new Passenger('Olaf', 1, 12345), new Passenger('Milana', 2, 12346),
+let passengers = [new Passenger('Olaf', 1, 12345), new Passenger('Milana', 2, 12346),
     new Passenger('Sem', 20, 12347), new Passenger('Ben', undefined, 12348)];
 
-let Tikets = [new Ticket(12, 5, new Date(2020, 2, 12, 5, 10), 80),
+let tickets = [new Ticket(12, 5, new Date(2020, 2, 12, 5, 10), 80),
     new Ticket(54, 21, new Date(2020, 3, 19, 5, 10), 80),
     new Ticket(12, 4, new Date(2020, 4, 20, 5, 10), 80),
     new Ticket(34, 2, new Date(2020, 30, 4, 5, 10), 80),
     new Ticket(34, 2, new Date(2020, 30, 4, 5, 10), 80),
     new Ticket(34, 2, new Date(2020, 30, 4, 5, 10), 80)];
 
-let Trains = [new Train(10, 5, 15), new Train(59, 10, 31),
+let trains = [new Train(10, 5, 15), new Train(59, 10, 31),
     new Train(15, 7, 13), new Train(83, 5, 20)];
 
 // Додавання нового пасажира в колекцію
