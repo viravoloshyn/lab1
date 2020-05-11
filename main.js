@@ -1,5 +1,6 @@
-const {combinations} = require('./anotherPart');
+//const {combinations} = require('./anotherPart');
 const {string_separate} = require('./task1')
+const {combinations} = require('./task2')
 const {sFact}=require('./task3');
 const {maximum}=require('./task4');
 const {calendar}=require('./task5');
