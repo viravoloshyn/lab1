@@ -33,7 +33,6 @@ exports.combinations = (arr) => {
             );
         });
     }
-
     return curr;
 }
 

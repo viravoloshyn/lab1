@@ -1,4 +1,5 @@
 const {combinations} = require('./anotherPart');
+const {string_separate} = require('./task1')
 const {sFact}=require('./task3');
 const {maximum}=require('./task4');
 const {calendar}=require('./task5');
@@ -7,11 +8,8 @@ const {calendar}=require('./task5');
 //Task 1 Реалізувати розбиття стрічки на слова у масив. Допустим є написання функцій.
 console.log('---------------Task 1---------------');
 
-let mas = "На вулиці теплий вечір";
+console.log(string_separate("На вулиці теплий вечір"))
 
-let newMas = mas.split(' ');
-
-console.log(newMas);
 
 //Task 2 Написати функцію, яка поверне усі перестановки слова
 console.log('---------------Task 2---------------');
